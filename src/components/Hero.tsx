@@ -3,7 +3,12 @@ import icon from "../assets/icons/delivery-bike (3).png";
 import ButtonWithIcon from "./Buttons/ButtonWithIcon";
 import SemiRoundButton from "./Buttons/SemiRoundButton";
 import Items from "./Items";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
+  const navigate = useNavigate();
+  const menuClickHandler = () => {
+    navigate("/menu");
+  };
   return (
     <div className="container flex flex-row  w-4/5 mx-auto pt-4">
       <div className="text-left justify-start">
@@ -24,7 +29,9 @@ const Hero = () => {
         </p>
         <div className="flex flex-row space-x-6">
           <span className="flex flex-row justify-between place-items-center space-x-4">
-            <SemiRoundButton>See the Menu</SemiRoundButton>
+            <SemiRoundButton onClick={menuClickHandler}>
+              See the Menu
+            </SemiRoundButton>
           </span>
           <button className="flex flex-row justify-between place-items-center space-x-4">
             <Icon

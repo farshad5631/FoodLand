@@ -1,4 +1,5 @@
 import RoundButton from "../components/Buttons/RoundedButton";
+import Student from "../assets/icons/Student";
 import about1 from "../assets/Images/about 1.png";
 import about2 from "../assets/Images/about 2.png";
 import about3 from "../assets/Images/about 3.png";
@@ -57,10 +58,11 @@ const About = () => {
         </div>
         <div className="flex flex-row justify-between mt-16 space-x-28">
           <div className="flex flex-col justify-center items-center space-y-6">
-            <Icon
+            {/* <Icon
               className="text-black text-7xl"
               icon="heroicons:academic-cap"
-            />
+            /> */}
+            <Student />
             <h2 className="text-3xl font-bold">Best Chef</h2>
             <p className="flex justify-center text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque

@@ -8,25 +8,25 @@ const Items = () => {
   const items = [
     { id: 1, image: img1, title: "Pizza", desc: "Mushroom Sauce", price: 6.15 },
     {
-      id: 1,
+      id: 2,
       image: img2,
       title: "Food Combo",
       desc: "Mushroom Sauce",
       price: 6.15,
     },
     {
-      id: 1,
+      id: 3,
       image: img3,
       title: "Burger",
       desc: "Mushroom Sauce",
       price: 6.15,
     },
-    { id: 1, image: img4, title: "Cake", desc: "Mushroom Sauce", price: 6.15 },
+    { id: 4, image: img4, title: "Cake", desc: "Mushroom Sauce", price: 6.15 },
   ];
   return (
     <div className="mx-auto grid grid-cols-2">
       {items.map((i) => (
-        <ItemCard {...i} />
+        <ItemCard key={i.id} {...i} />
       ))}
     </div>
   );

@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="container px-44 py-4 fixed bg-white top-0 z-10 mx-auto">
       <div className="flex items-center justify-between">
-        <a className="pt-2 cursor-pointer">
+        <a href="/" className="pt-2 cursor-pointer">
           <img src={logo} alt="Logo" />
         </a>
         <NavList />

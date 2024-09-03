@@ -32,7 +32,7 @@ const Service = () => {
       <TitleCard title={heading.heading} heading={heading.title} />
       <div className="flex mx-72 gap-10">
         {services.map((s) => (
-          <ServiceCard {...s} />
+          <ServiceCard key={s.id} {...s} />
         ))}
       </div>
     </div>

@@ -63,7 +63,7 @@ const MenuList = () => {
   return (
     <div className="grid grid-cols-2 gap-x-12 gap-y-6 w-4/5 m-10">
       {menuItems.map((m) => (
-        <MenuItem {...m} />
+        <MenuItem key={m.id} {...m} />
       ))}
     </div>
   );

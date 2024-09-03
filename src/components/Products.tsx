@@ -8,8 +8,10 @@ import img6 from "../assets/Images/gyro-sandwich1-1650490757 1.png";
 import ProductCard from "./Cards/ProductCard";
 import TitleCard from "./Cards/TitleCard";
 import ButtonWithIcon from "./Buttons/ButtonWithIcon";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();
   const heading = {
     heading: "Product",
     title: "Most Popular Items",
@@ -28,16 +30,21 @@ const Products = () => {
     { id: 5, imgSrc: img5, name: "Pizza", star: 5.0, price: 20.2 },
     { id: 6, imgSrc: img6, name: "Gyro Sandwhic", star: 5.0, price: 12.2 },
   ];
+  const showMenuHandler = () => {
+    navigate("/menu");
+  };
   return (
     <div className="mb-12 mt-10">
       <TitleCard title={heading.heading} heading={heading.title} />
       <div className="grid grid-cols-3 gap-10 w-4/5 mx-auto mb-8">
         {products.map((p) => (
-          <ProductCard {...p} />
+          <ProductCard key={p.id} {...p} />
         ))}
       </div>
       <div className="flex items-center justify-center">
-        <ButtonWithIcon img={arrow}>See More Products</ButtonWithIcon>
+        <ButtonWithIcon onClick={showMenuHandler} img={arrow}>
+          See More Products
+        </ButtonWithIcon>
       </div>
     </div>
   );

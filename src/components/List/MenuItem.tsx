@@ -1,6 +1,6 @@
 const MenuItem = (props: any) => {
   return (
-    <div key={props.id} className="flex flex-col border-dotted">
+    <div className="flex flex-col border-dotted">
       <div className="flex mt-2 justify-between">
         <h1 className="text-2xl text-red-500 font-bold">{props.name}</h1>
         <span className="flex ml-2 justify-end text-red-500 font-bold">
